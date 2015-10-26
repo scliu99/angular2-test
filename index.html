@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Angular 2 setup</title>
+    <script src="node_modules/traceur/bin/traceur.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.min.js"></script>
+    <!-- Note order of how these libs are included does matter here -->
+  </head>
+  <body>
+    <!-- The app component created in app.js -->
+    <app></app>
+    <!-- Load the application code note its app.js -->
+    <script>
+        System.config({
+            packages: {'app': {defaultExtension: 'js'}}
+        });
+        System.import('app/main');
+    </script>
+  </body>
+</html>
